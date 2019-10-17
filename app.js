@@ -1,30 +1,31 @@
-(function(){
-'use strict'
+// (function(){
+// 'use strict'
 
-angular.module('HungerAdvisor',[])
+// angular.module('HungerAdvisor',[])
 
-.controller('HungerAdvisorController', function ($scope) {
-  $scope.message = "";
-  $scope.foodItems = "";
-  $scope.calculateFoodItems = function () {
-    var totalFoodItems = countFoodItems($scope.foodItems);
-    $scope.message = totalFoodItems;
-  };
-});
+// .controller('HungerAdvisorController',HungerAdvisorController);
 
-function countFoodItems(fItems){
- var foodItems = fItems.split(',');
- if (foodItems.length >=1 && foodItems.length<=3) {
-   if (fItems.length==0) {
-     return '"Please enter data first"';
-   }else {
-     return '"Enjoy!"';
-   }
- }else if (foodItems.length>3) {
-   return '"Too much!"';
- }
- // return foodItems.length;
-}
+// HungerAdvisorController.$inject = ['$scope'];
+
+//  function HungerAdvisorController($scope) {
+//   $scope.message = "";
+//   $scope.foodItems = "";
+//   $scope.calculateFoodItems = function () {
+//     var totalFoodItems= "noitems";
+//     var fItems = $scope.foodItems.split(',');
+//     if (fItems.length >=1 && fItems.length<=3) {
+//       if ($scope.foodItems.length==0) {
+//        $scope.message = '"Please enter data first"';
+//       }else {
+//        $scope.message = '"Enjoy!"';
+//       }
+//     }else if (fItems.length>3) {
+//      $scope.message = '"Too much!"';
+//     }
+//   };
+// }
+// })();
 
 
-})();
+(function(){'use strict'
+angular.module('HungerAdvisor',[]).controller('HungerAdvisorController',HungerAdvisorController);HungerAdvisorController.$inject=['$scope'];function HungerAdvisorController($scope){$scope.message="";$scope.foodItems="";$scope.calculateFoodItems=function(){var totalFoodItems="noitems";var fItems=$scope.foodItems.split(',');if(fItems.length>=1&&fItems.length<=3){if($scope.foodItems.length==0){$scope.message='"Please enter data first"'}else{$scope.message='"Enjoy!"'}}else if(fItems.length>3){$scope.message='"Too much!"'}}}})()
